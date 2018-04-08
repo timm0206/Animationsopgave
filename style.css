@@ -1,0 +1,145 @@
+#scene {
+    width: 100vw;
+    height: 56.25vw;
+    position: relative;
+}
+
+#baggrund {
+    width: 100vw;
+    height: 56.25vw;
+    background-image: url(Baggrund_Tegnebr%C3%A6t%201.png);
+    background-size: 100%;
+
+
+}
+
+#mellemgrund {
+    width: 100vw;
+    height: 56.25vw;
+    background-image: url(Mellemgrund_Tegnebr%C3%A6t%201.png);
+    background-size: 100%;
+    position: absolute;
+    top: 0vw;
+
+}
+
+#forgrund {
+    width: 100vw;
+    height: 56.25vw;
+    background-image: url(Forgrund_Tegnebr%C3%A6t%201.png);
+    background-size: 100%;
+    position: absolute;
+    top: 0;
+
+}
+
+#krukke {
+    width: 20vw;
+    height: 10vw;
+    background-image: url(Krukke%20med%20guld-01.png);
+    background-size: 100%;
+    position: absolute;
+    top: 47vw;
+    left: 68vw;
+    animation-name: krukke;
+    animation-duration: 4s;
+    animation-iteration-count: 10;
+    animation-direction: alternate;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+
+
+}
+
+
+#kvinde {
+    width: 40vw;
+    height: 25vw;
+    background-image: url(Kvinde-01.png);
+    background-size: 100%;
+    position: absolute;
+    top: 37.5vw;
+    left: -2vw;
+    animation-name: kvinde;
+    animation-duration: 10s;
+    animation-iteration-count: 5;
+    animation-timing-function: linear;
+
+
+}
+
+
+#mand {
+    width: 40vw;
+    height: 25vw;
+    background-image: url(Mand-01.png);
+    background-size: 100%;
+    position: absolute;
+    top: 38.7vw;
+    left: 30vw;
+    animation-name: hop;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: absolute;
+
+}
+
+
+
+@keyframes kvinde {
+    20% {
+        left: -2vw;
+    }
+    40% {
+        left: 100vw;
+    }
+    100% {
+        left: 100vw;
+    }
+}
+
+
+
+@keyframes krukke {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes hop {
+    from,
+    20%,
+    53%,
+    80%,
+    to {
+        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+
+    40%,
+    43% {
+        animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+        animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+        -webkit-transform: translate3d(0, -30px, 0);
+        transform: translate3d(0, -30px, 0);
+    }
+
+    70% {
+        animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+        animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+        transform: translate3d(0, -15px, 0);
+        transform: translate3d(0, -15px, 0);
+    }
+
+    90% {
+        transform: translate3d(0, -4px, 0);
+        transform: translate3d(0, -4px, 0);
+    }
+}
