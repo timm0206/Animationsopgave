@@ -43,7 +43,7 @@
     left: 68vw;
     animation-name: krukke;
     animation-duration: 4s;
-    animation-iteration-count: 10;
+    animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
@@ -62,7 +62,7 @@
     top: 37.5vw;
     left: -2vw;
     animation-name: kvinde;
-    animation-duration: 2.86s;
+    animation-duration: 4s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation-delay: 0s;
@@ -85,6 +85,7 @@
     animation-timing-function: linear;
     position: absolute;
 
+
 }
 
 
@@ -93,27 +94,27 @@
 
 @keyframes kvinde {
     0% {
-        left: 0px;
+        left: 0vw;
 
     }
 
     25% {
-        left: 47px;
+        left: 10vw;
 
     }
 
     50% {
-        left: 119px;
+        left: 20vw;
 
     }
 
     75% {
-        left: 47px;
+        left: 10vw;
 
     }
 
     100% {
-        left: 0px;
+        left: 0vw;
 
     }
 }
