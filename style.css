@@ -44,62 +44,86 @@
     position: absolute;
     top: 47vw;
     left: 68vw;
-    animation-name: krukke;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-timing-function: ease-out;
-    animation-fill-mode: forwards;
-    animation-delay: 2s;
     z-index: 2;
 
 
 }
 
 
-#kvinde {
-    width: 40vw;
-    height: 25vw;
-    background-image: url(Kvinde-01.png);
-    background-size: 100%;
+
+
+#kvinde_container {
     position: absolute;
-    top: 37.5vw;
-    left: -2vw;
-    animation-name: kvinde;
-    animation-duration: 4s;
+    bottom: -14.3vw;
+    left: 5vw;
+    z-index: 1;
+
+}
+
+#kvinde_sprite {
+    background-image: url(Spritesheet%20kvinde%20uden%20farve_Tegnebr%C3%A6t%201.svg);
+    background-size: 800% 100%;
+    width: 30vw;
+    height: 42.86vw;
+    transform: scale(0.7);
+}
+
+
+.kvinde_move {
+    animation-name: kvinde_move_kf;
+    animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-    animation-delay: 0s;
+}
 
+@keyframes kvinde_move_kf {
+    0% {
+        left: 0vw;
+    }
 
+    25% {
+        left: 10vw;
+    }
+
+    50% {
+        left: 20vw;
+
+    }
+
+    75% {
+        left: 10vw;
+    }
+
+    100% {
+        left: 0vw;
+    }
+
+}
+
+.kvinde_gaer {
+    animation-name: kvinde_gaer_kf;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(8);
+}
+
+@keyframes kvinde_gaer_kf {
+    0% {
+        background-position: 0 0%;
+    }
+    100% {
+        background-position: 800% 0%;
+    }
 }
 
 
 
-
-/*
-#mand {
-    width: 40vw;
-    height: 25vw;
-    background-image: url(Mand-01.png);
-    background-size: 100%;
-    position: absolute;
-    top: 38.7vw;
-    left: 30vw;
-    animation-name: hop;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    position: absolute;
-*/
-
-}
 
 #mand_container {
     position: absolute;
-    bottom: 15vw;
-    left: 30vw;
-    z-index: 2;
+    bottom: -11.4vw;
+    left: 35vw;
+    z-index: 4;
 
 }
 
@@ -112,7 +136,7 @@
 
 .mand_move {
     animation-name: mand_move_kf;
-    animation-duration: 1s;
+    animation-duration: 7s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 
@@ -122,9 +146,23 @@
     0% {
         right: -20vw;
     }
-    100% {
-        right: 40vw;
+
+    25% {
+        right: 0vw;
     }
+
+    50% {
+        right: 20vw;
+    }
+
+    75% {
+        right: 0vw;
+    }
+
+    100% {
+        right: -20vw;
+    }
+
 }
 
 
@@ -137,25 +175,11 @@
 
 }
 
-
-
 @keyframes mand_gaer_kf {
     0% {
         background-position: 0 0%;
     }
     100% {
         background-position: 800% 0%;
-    }
-}
-
-
-
-
-@keyframes krukke {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
     }
 }
