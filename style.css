@@ -9,6 +9,7 @@
     height: 56.25vw;
     background-image: url(Baggrund_Tegnebr%C3%A6t%201.png);
     background-size: 100%;
+    z-index: 1;
 
 
 }
@@ -20,6 +21,7 @@
     background-size: 100%;
     position: absolute;
     top: 0vw;
+    z-index: 1;
 
 }
 
@@ -30,6 +32,7 @@
     background-size: 100%;
     position: absolute;
     top: 0vw;
+    z-index: 3;
 
 }
 
@@ -48,6 +51,7 @@
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
     animation-delay: 2s;
+    z-index: 2;
 
 
 }
@@ -93,24 +97,26 @@
 
 #mand_container {
     position: absolute;
-    top: 38.7vw;
+    bottom: 15vw;
     left: 30vw;
+    z-index: 2;
 
 }
 
 #mand_sprite {
-
-    background-image: url(Test_Tegnebr%C3%A6t%201.svg);
-    background-size: 100%;
-    width: 120vw;
-    height: 20vw;
+    position: relative;
+    background-image: url(Spritesheet%20mand%20uden%20farve_Tegnebr%C3%A6t%201.svg);
+    background-size: 800% 100%;
+    width: 30vw;
+    height: 42.86vw;
 }
 
 .mand_move {
     animation-name: mand_move_kf;
-    animation-duration: 5s;
+    animation-duration: 1s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+
 }
 
 @keyframes mand_move_kf {
@@ -118,42 +124,31 @@
         right: -20vw;
     }
     100% {
-        right: 30vw;
+        right: 40vw;
     }
 }
 
 
+.mand_gaer {
+    animation-name: mand_gaer_kf;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(8);
+
+
+}
 
 
 
-
-
-@keyframes kvinde {
+@keyframes mand_gaer_kf {
     0% {
-        left: 0vw;
-
+        background-position: 0 0%;
     }
-
-    25% {
-        left: 10vw;
-
-    }
-
-    50% {
-        left: 20vw;
-
-    }
-
-    75% {
-        left: 10vw;
-
-    }
-
     100% {
-        left: 0vw;
-
+        background-position: 800% 0%;
     }
 }
+
 
 
 
@@ -163,38 +158,5 @@
     }
     to {
         transform: rotate(360deg);
-    }
-}
-
-@keyframes hop {
-    from,
-    20%,
-    53%,
-    80%,
-    to {
-        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-        transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-    }
-
-    40%,
-    43% {
-        animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
-        animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
-        transform: translate3d(0, -30px, 0);
-        transform: translate3d(0, -30px, 0);
-    }
-
-    70% {
-        animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
-        animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
-        transform: translate3d(0, -15px, 0);
-        transform: translate3d(0, -15px, 0);
-    }
-
-    90% {
-        transform: translate3d(0, -4px, 0);
-        transform: translate3d(0, -4px, 0);
     }
 }
