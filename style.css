@@ -121,7 +121,7 @@
 
 #mand_container {
     position: absolute;
-    bottom: -11.4vw;
+    bottom: -11.6vw;
     left: 35vw;
     z-index: 4;
 
@@ -144,11 +144,11 @@
 
 @keyframes mand_move_kf {
     0% {
-        right: -20vw;
+        right: 0vw;
     }
 
     25% {
-        right: 0vw;
+        right: 10vw;
     }
 
     50% {
@@ -156,11 +156,11 @@
     }
 
     75% {
-        right: 0vw;
+        right: 10vw;
     }
 
     100% {
-        right: -20vw;
+        right: 0vw;
     }
 
 }
