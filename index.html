@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="da">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,17 +9,34 @@
 </head>
 
 <body>
+    <div id="knap">
+        <button id="knap_kig_rundt">Figuren kigger rundt</button>
+        <button id="knap_højre">Figuren går til højre</button>
+        <button id="knap_venstre">Figuren går til venstre</button>
+        <button id="knap_dø">Figuren dør</button>
+        <button id="knap_lever">Figuren lever</button>
+    </div>
 
     <div id="scene">
         <div id="baggrund"></div>
         <div id="mellemgrund"></div>
-        <div id="kvinde"></div>
+        <div id="kvinde_container" class="kvinde_move">
+            <div id="kvinde_sprite" class="kvinde_gaer"></div>
+        </div>
         <div id="krukke"></div>
-        <div id="mand"></div>
+        <div id="mand_container" class="mand_move">
+            <div id="mand_sprite" class="mand_gaer">
+
+            </div>
+        </div>
         <div id="forgrund"></div>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="javascript.js"></script>
 
 
     </div>
 
 </body>
+
 </html>

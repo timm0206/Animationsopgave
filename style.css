@@ -71,6 +71,9 @@
 }
 
 
+
+
+/*
 #mand {
     width: 40vw;
     height: 25vw;
@@ -84,9 +87,42 @@
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     position: absolute;
-
+*/
 
 }
+
+#mand_container {
+    position: absolute;
+    top: 38.7vw;
+    left: 30vw;
+
+}
+
+#mand_sprite {
+
+    background-image: url(Mand-01.png);
+    background-size: 100%;
+    width: 40vw;
+    height: 20vw;
+}
+
+.mand_move {
+    animation-name: mand_move_kf;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes mand_move_kf {
+    0% {
+        right: -20vw;
+    }
+    100% {
+        right: 30vw;
+    }
+}
+
+
 
 
 
