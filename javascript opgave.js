@@ -12,15 +12,17 @@ function startHistorie() {
 
     $("#mand_container").addClass("mand_move");
     $("#mand_sprite_1").addClass("mand_gaer");
-    $("#dame_click").on("animation-end", mandStaer);
+    $("#mand_container").on("animationend", mandStaer);
 }
 
 
 function mandStaer() {
     console.log("mandStaer");
 
+    $("#mand_container").off("animationend", mandStaer);
+
     $("#mand_container").removeClass("mand_move");
     $("#mand_sprite_1").removeClass("mand_gaer");
 
-    $("#mand_sprite_2").addClass("mand_staer");
+    $("#mand_sprite_1").addClass("mand_staer");
 }

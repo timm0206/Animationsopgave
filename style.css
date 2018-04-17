@@ -156,7 +156,7 @@
     background-size: 800% 100%;
     width: 30vw;
     height: 42.86vw;
-    transform: scale(-1, 1)
+
 }
 
 
@@ -165,8 +165,7 @@
     animation-duration: 1s;
     animation-iteration-count: 6;
     animation-timing-function: steps(8);
-
-
+    transform: scale(-1, 1)
 }
 
 @keyframes mand_gaer_kf {
@@ -178,18 +177,18 @@
     }
 }
 
-#mand_sprite_2 {
+/*#mand_sprite_1 {
     position: absolute;
     bottom: 5.6vw;
     left: 5vw;
     z-index: 4;
-}
-
+}*/
 
 .mand_staer {
     background-image: url(Mand%20350x500-01.svg);
     background-size: 100%;
     width: 20vw;
     height: 30vw;
-    transform: scale(0.8)
 }
+
+.mand_gaer_venstre
