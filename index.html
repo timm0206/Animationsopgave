@@ -10,19 +10,21 @@
 
 <body>
     <div id="knap">
-        <button id="knap_mand_ind">Mand går ind</button>
-        <button id="knap_venstre">Mand går til venstre</button>
-        <button id="knap_dø">Mand dør</button>
+        <button id="dame_click">Venstre</button>
     </div>
 
     <div id="scene">
+        <audio id="vaporwave" src="Sound/vaporwave.mp3"></audio>
         <div id="baggrund"></div>
         <div id="mellemgrund"></div>
         <div id="krukke"></div>
         <div id="mand_container" class="mand_move">
-            <div id="mand_sprite" class="mand_gaer">
+            <div id="mand_sprite_1" class="mand_gaer">
             </div>
+            <div id="mand_sprite_2" class="mand_staer"></div>
+
         </div>
+
 
         <div id="kvinde_container" class="kvinde_move">
             <div id="kvinde_sprite" class="kvinde_gaer"></div>
@@ -31,7 +33,7 @@
         <div id="forgrund"></div>
 
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-        <script src="javascript.js"></script>
+        <script src="javascript%20opgave.js"></script>
 
 
     </div>
