@@ -40,6 +40,7 @@ function mandVenstre() {
     console.log("mandVenstre");
     $("#mand_container").off("animationend", mandVenstre);
     $("#mand_container").removeClass("mand_staar");
+    $("#mand_sprite").removeClass("mand_staar");
     $("#mand_sprite").addClass("mand_gaar_venstre");
     $("#mand_container").addClass("mand_move_venstre");
     $("#mand_container").on("animationend", mandStaarVenstre);
@@ -51,7 +52,7 @@ function mandStaarVenstre() {
     console.log("mandStaarVenstre");
     $("#mand_container").off("animationend", mandStaarVenstre);
 
-    $("#mand_container").removeClass("mand_gaar_venstre");
+    $("#mand_sprite").removeClass("mand_gaar_venstre");
     $("#mand_container").removeClass("mand_move_venstre");
 
     $("#mand_container").addClass("mand_staar_venstre")
