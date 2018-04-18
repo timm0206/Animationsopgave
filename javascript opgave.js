@@ -11,18 +11,53 @@ function startHistorie() {
     $("#vaporwave")[0].play();
 
     $("#mand_container").addClass("mand_move");
-    $("#mand_sprite_1").addClass("mand_gaer");
-    $("#mand_container").on("animationend", mandStaer);
+    $("#mand_sprite").addClass("mand_gaar");
+    $("#kvinde_container").addClass("kvinde_move");
+    $("#kvinde_sprite").addClass("kvinde_gaar");
+
+    $("#mand_container").on("animationend", mandStaar);
 }
 
 
-function mandStaer() {
-    console.log("mandStaer");
+function mandStaar() {
+    console.log("mandStaar");
 
-    $("#mand_container").off("animationend", mandStaer);
+    $("#mand_container").off("animationend", mandStaar);
 
     $("#mand_container").removeClass("mand_move");
-    $("#mand_sprite_1").removeClass("mand_gaer");
+    $("#mand_sprite").removeClass("mand_gaar");
 
-    $("#mand_sprite_1").addClass("mand_staer");
+    $("#mand_container").addClass("mand_staar");
+    $("#mand_sprite").addClass("mand_staar");
+
+    $("#knap").on("click", mandVenstre);
+
+
+}
+
+
+function mandVenstre() {
+    console.log("mandVenstre");
+    $("#mand_container").off("animationend", mandVenstre);
+    $("#mand_container").removeClass("mand_staar");
+    $("#mand_sprite").addClass("mand_gaar_venstre");
+    $("#mand_container").addClass("mand_move_venstre");
+    $("#mand_container").on("animationend", mandStaarVenstre);
+
+}
+
+
+function mandStaarVenstre() {
+    console.log("mandStaarVenstre");
+    $("#mand_container").off("animationend", mandStaarVenstre);
+
+    $("#mand_container").removeClass("mand_gaar_venstre");
+    $("#mand_container").removeClass("mand_move_venstre");
+
+    $("#mand_container").addClass("mand_staar_venstre")
+    $("#mand_sprite").addClass("mand_staar_venstre_sprite")
+
+
+    $("#mand_container").off("animationend", mandStaarVenstre);
+
 }
