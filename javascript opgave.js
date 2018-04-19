@@ -30,7 +30,9 @@ function mandStaar() {
     $("#mand_container").addClass("mand_staar");
     $("#mand_sprite").addClass("mand_staar");
 
-    $("#knap").on("click", mandVenstre);
+    $("#knap_venstre").on("click", mandVenstre);
+    $("#knap_højre").on("click", mandhojre);
+
 
 
 }
@@ -60,5 +62,21 @@ function mandStaarVenstre() {
 
 
     $("#mand_container").off("animationend", mandStaarVenstre);
+
+}
+
+
+
+
+
+
+function mandhojre() {
+    console.log("mandHojre");
+    //$("#mand_container").off("animationend", mandhojre);
+    $("#mand_container").removeClass("mand_staar");
+    $("#mand_sprite").removeClass("mand_staar");
+    $("#mand_sprite").addClass("mand_gaar_hojre");
+    $("#mand_container").addClass("mand_move_hojre");
+    //$("#mand_container").on("animationend", mandStaarHojre);
 
 }

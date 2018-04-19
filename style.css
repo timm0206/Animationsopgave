@@ -129,7 +129,6 @@
 #mand_container {
     position: absolute;
     bottom: -11.6vw;
-    left: 35vw;
     z-index: 4;
 
 }
@@ -140,8 +139,6 @@
     animation-duration: 6s;
     animation-iteration-count: 1;
     animation-timing-function: linear;
-    animation-delay: 0;
-
 }
 
 @keyframes mand_move_kf {
@@ -192,7 +189,6 @@
     animation-iteration-count: infinite;
     animation-timing-function: steps(1);
     animation-duration: 1s;
-    transform: scaleX(-1, 1)
 }
 
 @keyframes mand_staar_kf {
@@ -259,17 +255,44 @@
 }
 
 .mand_staar_venstre_sprite {
-    animation-name: mand_staar_venstre_sprite_kf;
-    animation-duration: infinite;
-    animation-iteration-count: 1;
-    animation-timing-function: steps(1);
+    background-position: 0% -100%;
 }
 
-@keyframes mand_staar_venstre_sprite_kf {
+
+
+
+.mand_gaar_hojre {
+    animation-name: mand_gaar_hojre_kf;
+    animation-duration: 1s;
+    animation-iteration-count: 4;
+    animation-timing-function: steps(8);
+    transform: scale(-1, 1)
+}
+
+@keyframes mand_gaar_hojre_kf {
     0% {
-        background-position: 0% -100%;
+        background-position: 800% 0%;
     }
     100% {
-        background-position: 0% -100%;
+        background-position: 0% 0%;
     }
+}
+
+.mand_move_hojre {
+    animation-name: mand_move_hojre_kf;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+
+}
+
+@keyframes mand_move_hojre_kf {
+    0% {
+        left: 30vw;
+    }
+    100% {
+        left: 55vw;
+    }
+
 }
