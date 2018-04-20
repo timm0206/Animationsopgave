@@ -36,6 +36,33 @@
 
 }
 
+
+.knap {
+    width: 20vw;
+    height: 10vw;
+    position: absolute;
+    bottom: 20vw;
+    border: 2px solid white; //background-color: white;
+    background-size: 100%;
+    text-align: center;
+    line-height: 9vw;
+    font-size: 3vw;
+    font-family: monospace;
+    color: white;
+    z-index: 4;
+}
+
+
+#venstre {
+    left: 29vw;
+    bottom: 30vw;
+}
+
+#hojre {
+    left: 50vw;
+    bottom: 30vw;
+}
+
 #krukke {
     width: 20vw;
     height: 10vw;
@@ -223,7 +250,6 @@
     animation-duration: 6s;
     animation-iteration-count: 1;
     animation-timing-function: linear;
-    animation-delay: 0;
 
 }
 
@@ -294,5 +320,96 @@
     100% {
         left: 55vw;
     }
+
+}
+
+
+
+
+.spillet {
+    width: 18vw;
+    height: 22vw;
+    position: absolute;
+    bottom: 25vw;
+    left: 70vw;
+    z-index: 40;
+}
+
+
+
+.game {
+    width: 5vw;
+    height: 7vw;
+    background-image: url(Coin-01.svg);
+    background-size: 100%;
+    position: absolute;
+
+
+    animation-name: puls_kf;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+
+@keyframes puls_kf {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.8);
+    }
+}
+
+
+.coin_1 {
+    left: 0vw;
+    bottom: 15vw;
+}
+
+.coin_2 {
+    left: 5vw;
+    bottom: 15vw;
+}
+
+.coin_3 {
+    left: 10vw;
+    bottom: 15vw;
+
+}
+
+.coin_4 {
+    left: 0vw;
+    bottom: 10vw;
+
+}
+
+.coin_5 {
+    left: 5vw;
+    bottom: 10vw;
+
+}
+
+.coin_6 {
+    left: 10vw;
+    bottom: 10vw;
+
+}
+
+.coin_7 {
+    left: 0vw;
+    bottom: 5vw;
+
+}
+
+.coin_8 {
+    left: 5vw;
+    bottom: 5vw;
+
+}
+
+.coin_9 {
+    left: 10vw;
+    bottom: 5vw;
 
 }

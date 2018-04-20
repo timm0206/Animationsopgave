@@ -1,3 +1,12 @@
+var antalCoins = 0;
+var nokCoins = false;
+var myTimer;
+
+
+
+
+
+
 $(window).on("load", startHistorie);
 
 
@@ -9,6 +18,9 @@ function startHistorie() {
 
 
     $("#vaporwave")[0].play();
+    $(".knap").hide();
+    $(".spillet").hide();
+
 
     $("#mand_container").addClass("mand_move");
     $("#mand_sprite").addClass("mand_gaar");
@@ -30,8 +42,9 @@ function mandStaar() {
     $("#mand_container").addClass("mand_staar");
     $("#mand_sprite").addClass("mand_staar");
 
-    $("#knap_venstre").on("click", mandVenstre);
-    $("#knap_højre").on("click", mandhojre);
+    $(".knap").show();
+    $("#venstre").on("click", mandVenstre);
+    $("#hojre").on("click", mandhojre);
 
 
 
@@ -45,6 +58,7 @@ function mandVenstre() {
     $("#mand_sprite").removeClass("mand_staar");
     $("#mand_sprite").addClass("mand_gaar_venstre");
     $("#mand_container").addClass("mand_move_venstre");
+    $(".knap").hide();
     $("#mand_container").on("animationend", mandStaarVenstre);
 
 }
@@ -72,11 +86,66 @@ function mandStaarVenstre() {
 
 function mandhojre() {
     console.log("mandHojre");
-    //$("#mand_container").off("animationend", mandhojre);
     $("#mand_container").removeClass("mand_staar");
     $("#mand_sprite").removeClass("mand_staar");
     $("#mand_sprite").addClass("mand_gaar_hojre");
     $("#mand_container").addClass("mand_move_hojre");
-    //$("#mand_container").on("animationend", mandStaarHojre);
+    $(".knap").hide();
+    $(".spillet").show();
+
+    randomValg();
+
+
+}
+
+
+function randomValg() {
+    console.log("randomValg");
+    var randomTal = Math.random();
+    console.log("randomTal");
+    if (randomTal >= 0.5) {
+        kanKlikke()
+        //setTimeout(mandStaarVenstre(), 10000)
+        $(".game").show();
+        console.log("True");
+    } else {
+        mand_vinder()
+        console.log("False");
+    }
+}
+
+
+function kanKlikke() {
+    console.log("kanKlikke");
+    $(".game").show();
+    $(".game").on("click", coinGame);
+
+
+}
+
+
+function coinGame() {
+    console.log("klikPaaCoin");
+    $(".game").removeClass("puls");
+    $(".game").off("click", coinGame);
+    $(this).hide();
+    antalCoins++;
+    faerdig();
+}
+
+function faerdig() {
+    console.log("Færdig med at klikke");
+    if (antalCoins >= 5) {
+        mand_vinder();
+    } else {
+        console.log("klik igen");
+        kanKlikke();
+    }
+}
+
+function mand_vinder() {
+    console.log("Mand vinder");
+    $(".spillet").hide();
+
 
 }
