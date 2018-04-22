@@ -42,7 +42,7 @@
     height: 10vw;
     position: absolute;
     bottom: 20vw;
-    border: 2px solid white; //background-color: white;
+    border: 2px solid white;
     background-size: 100%;
     text-align: center;
     line-height: 9vw;
@@ -268,7 +268,7 @@
     animation-iteration-count: infinite;
     animation-timing-function: steps(1);
     animation-duration: 1s;
-    transform: scaleX(-1, 1)
+    transform: scaleX(-1, 1);
 }
 
 @keyframes mand_staar_venstre_kf {
